@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LoginSystem
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Welcome to First Login System");
+            Console.Write("First Name: ");
+            string FstName = Console.ReadLine();
+            Console.Write("Last Name: ");
+            string LName = Console.ReadLine();
+            Console.Write("User Name: ");
+            var userName = Console.ReadLine();
+            Console.Write("Date of Birth: ");
+            var DOB = Console.ReadLine();
+            Console.Write("Address: ");
+            var Address = Console.ReadLine();
+            Console.Write("Password: ");
+            var PassWord = Console.ReadLine();
+            Console.Write("Confirm Password: ");
+            var ConPass =  Console.ReadLine();
+
+
+            if (PassWord == ConPass)
+            {
+                Console.WriteLine("Registration Successfully");
+            }
+            else
+            {
+                Console.WriteLine("Password doesn't match");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Welcome back");
+            
+            
+            Console.Write("user name: ");
+            var LogUserName = Console.ReadLine();
+            Console.Write("Password: ");
+            var Logpass = Console.ReadLine();
+
+            if (LogUserName == userName & Logpass == PassWord)
+            {
+                Console.WriteLine("Log In Successfully"+Environment.NewLine);
+                Console.WriteLine(FstName + " " + LName + Environment.NewLine + "DOB" + DOB + Environment.NewLine + "Address: " + Address + Environment.NewLine);
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong");
+            }
+            
+            Console.ReadKey();
+        }
+        
+    }
+}
